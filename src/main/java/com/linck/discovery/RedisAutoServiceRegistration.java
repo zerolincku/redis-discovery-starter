@@ -1,6 +1,7 @@
 package com.linck.discovery;
 
 import org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration;
+import org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationProperties;
 import org.springframework.cloud.client.serviceregistry.ServiceRegistry;
 import org.springframework.context.ApplicationContext;
 
@@ -13,7 +14,7 @@ public class RedisAutoServiceRegistration extends AbstractAutoServiceRegistratio
                                         ServiceRegistry<RedisRegistration> serviceRegistry,
                                         RedisDiscoveryProperties properties,
                                         RedisRegistration registration) {
-        super(context, serviceRegistry, properties);
+        super(context, serviceRegistry, new AutoServiceRegistrationProperties());
         this.properties = properties;
         this.registration = registration;
     }

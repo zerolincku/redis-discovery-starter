@@ -1,7 +1,7 @@
 package com.linck.discovery;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
-import io.lettuce.core.dynamic.annotation.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
